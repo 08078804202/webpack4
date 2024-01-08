@@ -1,0 +1,35 @@
+{
+    "plugins": [
+        // "@babel/plugin-transform-arrow-functions",
+        // "@babel/plugin-transform-classes",
+        [
+            "@babel/plugin-proposal-decorators",
+            {
+                "version": "2023-05"
+            }
+        ],
+        [
+            "@babel/plugin-transform-runtime", //使用@babel/runtime
+            {
+                "absoluteRuntime": false,
+                "corejs": 3,
+                "helpers": true,
+                "regenerator": true,
+                "version": "7.0.0-beta.0"
+            }
+        ]
+    ],
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                // "useBuiltIns": "entry", //使用所有的 polyfill
+                "useBuiltIns": "usage", //按需使用 polyfill
+                "corejs": "3.22"
+            }
+        ],
+        "@babel/preset-typescript",
+        "@babel/preset-react",
+        "@babel/preset-flow"
+    ]
+}

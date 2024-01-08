@@ -1,0 +1,9 @@
+body{
+    color: blue;
+    font-size: 24px;
+}
+div.aaa{
+    height: 300px;
+    width: 500px;
+    background-image: url("./zp05.JPG");
+}

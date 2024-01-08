@@ -1,0 +1,141 @@
+1.全局安装
+npm install --global webpack@4
+npm install  --global  webpack-cli
+
+2.webpack -v
+
+3.运行
+Set 'mode' option to 'development' or 'production'
+webpack --mode=development
+
+webpack --mode=development ./src/hello.js --output-path ./build/
+
+npm init -y
+
+ "scripts": {
+    "dev": "webpack --mode=development"
+  },
+
+ npm run dev
+
+npm install webpack webpack-cli --save-dev
+
+npm install -g npx
+
+"scripts": {
+    "dev": "npx webpack --mode=development",
+  },
+
+4.babel
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install --save @babel/polyfill
+
+npm install -D babel-loader
+
+npm install --save-dev @babel/plugin-transform-arrow-functions
+
+npm install --save-dev @babel/plugin-transform-classes
+
+npm install --save-dev @babel/plugin-proposal-decorators
+
+预设
+Babel 预设可以充当可共享的 Babel 插件和/或配置集options。
+
+官方
+我们为常见环境组装了一些预设：
+
+@babel/preset-env用于编译 ES2015+ 语法 
+npm install --save-dev @babel/preset-env
+
+@babel/preset-typescript用于TypeScript
+npm install --save-dev @babel/preset-typescript
+
+@babel/preset-react用于React
+npm install --save-dev @babel/preset-react
+
+@babel/preset-flow用于Flow
+npm install --save-dev @babel/preset-flow
+
+@babel/polyfill  增强  解决api的问题  。babel可以转换ES5，6 ，但是不能解决API，所有要使用polyfill。
+npm install --save @babel/polyfill
+npm install core-js@3 --save
+
+fetch
+npm install whatwg-fetch --save
+引入babel-polyfill会有一定副作用，比如：
+全局对象污染，原型污染
+ 从 Babel 7.4.0 开始，这个包已被弃用，被@babel/runtime代替
+
+@babel/runtime
+npm install --save @babel/runtime
+npm install --save-dev @babel/plugin-transform-runtime    //避免重复的
+npm install --save @babel/runtime-corejs3
+
+
+@babel/plugin-transform-regenerator
+npm install --save-dev @babel/plugin-transform-regenerator
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-regenerator",
+      {
+        "asyncGenerators": false,
+        "generators": false,
+        "async": false
+      }
+    ]
+  ]
+}
+
+pligin 扩展功能  loader 转化文件
+
+HTML Webpack Plugin
+npm i --save-dev html-webpack-plugin
+
+css-loader
+npm install --save-dev css-loader
+npm install --save-dev style-loader
+
+sass-loader
+npm install sass-loader sass  --save-dev
+
+less-loader
+npm install less less-loader --save-dev
+
+mini-css-extract-plugin
+npm install --save-dev mini-css-extract-plugin
+
+
+实时更新
+webpack-dev-server
+npm install webpack-dev-server --save-dev
+清理旧文件
+clean-webpack-plugin
+npm install --save-dev clean-webpack-plugin
+
+
+//运行编译后的文件
+npm i -g serve
+serve -s dist //dist 文件夹 里面必须有index.html
+//照片
+file-loader  
+npm install file-loader --save-dev
+压缩图片
+image-webpack-loader
+npm install image-webpack-loader --save-dev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
