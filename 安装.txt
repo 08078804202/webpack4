@@ -124,8 +124,18 @@ npm install file-loader --save-dev
 image-webpack-loader
 npm install image-webpack-loader --save-dev
 
+webpack-merge 
+npm i webpack-merge --save-dev
 
 
+****************有问题  开发和生产的mode设定没有解决*********20240110**********************
+运行开发和生产分离后的webpack配置文件  //轻松学 Webpack 4 免费视频教程 #30 构建开发和生产环境 - 分离配置文件
+开发： npx webpack-dev-server --open --config=./webpack/webpack.dev.js
+生产： npx webpack --config=./webpack/webpack.prod.js
+****************************end*********************************
+
+webpackbar  //显示编译的进度
+npm install webpackbar -D
 
 
 
